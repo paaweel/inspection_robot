@@ -1,0 +1,873 @@
+<robot
+  name="robot_description">
+  <link
+    name="base1_link">
+    <inertial>
+      <origin
+        xyz="-0.014807 -0.15551 -0.21151"
+        rpy="0 0 0" />
+      <mass
+        value="0.65449" />
+      <inertia
+        ixx="9.8736E-06"
+        ixy="-1.1179E-06"
+        ixz="-1.9417E-06"
+        iyy="8.485E-06"
+        iyz="-4.1729E-06"
+        izz="3.2256E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ramie1">
+    <inertial>
+      <origin
+        xyz="-0.0089971 0.004895 -4.1495E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.72954" />
+      <inertia
+        ixx="0.00012154"
+        ixy="0.00019756"
+        ixz="2.4311E-16"
+        iyy="0.00037119"
+        iyz="3.2787E-17"
+        izz="0.00048272" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014472 0.21014 -0.15632"
+      rpy="-1.6144 1.0405 -1.3565" />
+    <parent
+      link="base1_link" />
+    <child
+      link="ramie1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo1">
+    <inertial>
+      <origin
+        xyz="0.0150000000000118 0.0643652245264785 1.21430643318377E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.110515551952779" />
+      <inertia
+        ixx="7.09233073958878E-05"
+        ixy="-2.73397883176455E-17"
+        ixz="2.11758236813575E-20"
+        iyy="4.60986797884964E-06"
+        iyz="-4.8808685398753E-18"
+        izz="6.63134394170761E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.087213 -0.0078411 0"
+      rpy="-3.1416 -1.1685E-14 2.5915" />
+    <parent
+      link="ramie1" />
+    <child
+      link="kolo1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie2">
+    <inertial>
+      <origin
+        xyz="0.00312503871222586 0.00537830877488554 -0.00760454978890397"
+        rpy="0 0 0" />
+      <mass
+        value="0.729540295336762" />
+      <inertia
+        ixx="0.000512593394378226"
+        ixy="-0.000131404473876246"
+        ixz="0.000217436299881964"
+        iyy="0.000503804445729925"
+        iyz="0.000221003248288544"
+        izz="0.000277490040319321" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014472 0.21014 -0.15632"
+      rpy="-1.6144 1.0405 -1.3565" />
+    <parent
+      link="base1_link" />
+    <child
+      link="ramie2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo2">
+    <inertial>
+      <origin
+        xyz="0.00750000000000045 0.0143575116558484 -0.0326143999194228"
+        rpy="0 0 0" />
+      <mass
+        value="0.110515551952779" />
+      <inertia
+        ixx="6.63134394172391E-05"
+        ixy="-2.51357027097714E-19"
+        ixz="6.60897457095168E-19"
+        iyy="6.0158361406816E-05"
+        iyz="2.44535586681249E-05"
+        izz="1.53748139680845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo2_joint"
+    type="fixed">
+    <origin
+      xyz="0.041089 0.095135 -0.056168"
+      rpy="0.84288 0.5236 -3.1416" />
+    <parent
+      link="ramie2" />
+    <child
+      link="kolo2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie3">
+    <inertial>
+      <origin
+        xyz="0.00229588880458638 0.00445371472112771 0.00616842002177362"
+        rpy="0 0 0" />
+      <mass
+        value="0.729540295336762" />
+      <inertia
+        ixx="0.000338452448806283"
+        ixy="-8.55054632356549E-05"
+        ixz="-0.000143457531800037"
+        iyy="0.000334488736281148"
+        iyz="-0.000142982277833267"
+        izz="0.000185710543647994" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.014472 0.21014 -0.15632"
+      rpy="-1.6144 1.0405 -1.3565" />
+    <parent
+      link="base1_link" />
+    <child
+      link="ramie3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo3">
+    <inertial>
+      <origin
+        xyz="0.0150000000000101 0.0643652245264744 1.63757896132211E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.110515551952779" />
+      <inertia
+        ixx="7.09233073958549E-05"
+        ixy="-2.11439540667171E-17"
+        ixz="1.6940658945086E-21"
+        iyy="4.6098679788496E-06"
+        iyz="-6.23998584330402E-18"
+        izz="6.63134394170432E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo3_joint"
+    type="fixed">
+    <origin
+      xyz="0.055717 0.0097094 0.096504"
+      rpy="-2.2991 0.72098 -2.1029" />
+    <parent
+      link="ramie3" />
+    <child
+      link="kolo3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie_rot">
+    <inertial>
+      <origin
+        xyz="0.0150000000000042 0.121832267899944 -0.00125384904024251"
+        rpy="0 0 0" />
+      <mass
+        value="0.736290295336832" />
+      <inertia
+        ixx="0.000489984496208085"
+        ixy="1.00093311485045E-16"
+        ixz="-2.30962167793725E-16"
+        iyy="5.15569692741312E-06"
+        iyz="8.6974736889983E-06"
+        izz="0.000485615139251794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie_rot_joint"
+    type="fixed">
+    <origin
+      xyz="0.02942 0.10561 -0.090955"
+      rpy="-2.6117 -0.022074 -2.8896" />
+    <parent
+      link="base1_link" />
+    <child
+      link="ramie_rot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie_rot2">
+    <inertial>
+      <origin
+        xyz="0.00781226879697906 0.00107925375598511 0.000332776627165625"
+        rpy="0 0 0" />
+      <mass
+        value="0.15890251580579" />
+      <inertia
+        ixx="0.00040809571971295"
+        ixy="-5.92810870437343E-05"
+        ixz="4.03251416139334E-07"
+        iyy="1.33299355285896E-05"
+        iyz="2.74458791570824E-06"
+        izz="0.000412185654150053" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie_rot2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 -1.3878E-17 2.7756E-17" />
+    <parent
+      link="ramie_rot" />
+    <child
+      link="ramie_rot2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="5.234"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ramie_rot_base2">
+    <inertial>
+      <origin
+        xyz="0.0210537490852589 -0.0204908156875084 3.37230243729891E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.731589935935932" />
+      <inertia
+        ixx="0.000403861239845398"
+        ixy="3.27198457285379E-05"
+        ixz="2.27079368763511E-16"
+        iyy="3.08859629570313E-06"
+        iyz="-1.15010133578189E-17"
+        izz="0.000406163496169912" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot_base2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie_rot_base2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie_rot_base2_joint"
+    type="fixed">
+    <origin
+      xyz="-0.012983 -0.096005 -0.015"
+      rpy="2.858 -1.5708 0" />
+    <parent
+      link="ramie_rot2" />
+    <child
+      link="ramie_rot_base2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie4">
+    <inertial>
+      <origin
+        xyz="0.00213637775290438 -0.00270359104621222 -0.00589213877589942"
+        rpy="0 0 0" />
+      <mass
+        value="0.729540295336761" />
+      <inertia
+        ixx="0.000311350374579786"
+        ixy="7.97006383806546E-05"
+        ixz="0.000130963334533667"
+        iyy="0.000305929143870408"
+        iyz="-0.000131718380891999"
+        izz="0.000172446485311126" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie4_joint"
+    type="revolute">
+    <origin
+      xyz="0.020446 -0.029502 0"
+      rpy="3.1416 0 -2.959" />
+    <parent
+      link="ramie_rot_base2" />
+    <child
+      link="ramie4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo4">
+    <inertial>
+      <origin
+        xyz="0.0150000000000135 0.06436522452649 -8.32667268468867E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.110515551952779" />
+      <inertia
+        ixx="7.09233073959785E-05"
+        ixy="-3.41945612619785E-17"
+        ixz="1.09584887551025E-20"
+        iyy="4.60986797884961E-06"
+        iyz="2.84788358734657E-19"
+        izz="6.63134394171668E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo4_joint"
+    type="fixed">
+    <origin
+      xyz="0.044738 0.010688 -0.077488"
+      rpy="2.2518 0.65307 -1.1133" />
+    <parent
+      link="ramie4" />
+    <child
+      link="kolo4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie5">
+    <inertial>
+      <origin
+        xyz="-0.00904700656510245 -0.00347139737403031 -3.42781358853017E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.729540295336761" />
+      <inertia
+        ixx="0.000132015975605143"
+        ixy="-0.000207605479165594"
+        ixz="2.79039757879879E-16"
+        iyy="0.000376020466460947"
+        iyz="7.09203746077081E-17"
+        izz="0.000498030366137306" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie5_joint"
+    type="revolute">
+    <origin
+      xyz="0.020446 -0.029502 0"
+      rpy="3.1416 0 -2.959" />
+    <parent
+      link="ramie_rot_base2" />
+    <child
+      link="ramie5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo5">
+    <inertial>
+      <origin
+        xyz="0.0150000000000157 0.0643652245265039 1.4432899320127E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.110515551952779" />
+      <inertia
+        ixx="7.09233073960876E-05"
+        ixy="-4.26491676854381E-17"
+        ixz="-6.7762635780344E-21"
+        iyy="4.60986797884962E-06"
+        iyz="-5.7700943158147E-18"
+        izz="6.63134394172758E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo5_joint"
+    type="fixed">
+    <origin
+      xyz="-0.08712 0.007688 0"
+      rpy="1.1102E-16 -6.1062E-16 -2.6035" />
+    <parent
+      link="ramie5" />
+    <child
+      link="kolo5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ramie6">
+    <inertial>
+      <origin
+        xyz="0.00250303948871296 -0.00331538736476427 0.00652721553150114"
+        rpy="0 0 0" />
+      <mass
+        value="0.729540295336761" />
+      <inertia
+        ixx="0.000391263475611928"
+        ixy="0.00010313000470963"
+        ixz="-0.000160520211655344"
+        iyy="0.00037351082578071"
+        iyz="0.000171320956826579"
+        izz="0.000219584248299871" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/ramie6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ramie6_joint"
+    type="revolute">
+    <origin
+      xyz="0.020446 -0.029502 0"
+      rpy="3.1416 0 -2.959" />
+    <parent
+      link="ramie_rot_base2" />
+    <child
+      link="ramie6" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1.0472"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="kolo6">
+    <inertial>
+      <origin
+        xyz="0.015 0.064365 -1.6168E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.11052" />
+      <inertia
+        ixx="7.0923E-05"
+        ixy="-4.471E-17"
+        ixz="0"
+        iyy="4.6099E-06"
+        iyz="6.2969E-18"
+        izz="6.6313E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/kolo6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kolo6_joint"
+    type="fixed">
+    <origin
+      xyz="0.043799 0.0084384 0.075863"
+      rpy="-2.3692 -0.79805 -0.93708" />
+    <parent
+      link="ramie6" />
+    <child
+      link="kolo6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
