@@ -119,8 +119,9 @@ def steer():
 def scanSensors():
 
     print 'sterr'
+    rospy.init_node('driveThrough')
+    
     while not rospy.is_shutdown():
-        rospy.init_node('driveThrough')
 
         cf_scan_sub = rospy.Subscriber('/laser/scan/cf', Range, cf_callback)
         cb_scan_sub = rospy.Subscriber('/laser/scan/cb', Range, cb_callback)
