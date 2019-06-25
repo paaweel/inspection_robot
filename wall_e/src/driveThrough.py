@@ -28,7 +28,7 @@ def br_callback(msg):
 
 def bl_callback(msg):
     g_sensor_data['bl'] = msg.range
-    #steer() # czy cos
+        #steer() # czy cos
 
 #def steer():
     #pub = rospy.Publisher(/'cmd_vel', Twist.. )
