@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="straight_pipe">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.057529 -2.0702 0.048193"
+        rpy="0 0 0" />
+      <mass
+        value="43.605" />
+      <inertia
+        ixx="17.27"
+        ixy="-1.6137E-15"
+        ixz="6.8792E-32"
+        iyy="1.1437"
+        iyz="9.874E-16"
+        izz="17.27" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_pipe/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.55294 0.71373 0.92157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_pipe/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="cz1">
+    <inertial>
+      <origin
+        xyz="0.036975 -3.4001E-16 0.036975"
+        rpy="0 0 0" />
+      <mass
+        value="24.47" />
+      <inertia
+        ixx="1.065"
+        ixy="3.5879E-08"
+        ixz="3.5123E-14"
+        iyy="1.4005"
+        iyz="-3.5879E-08"
+        izz="1.065" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_pipe/meshes/cz1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.55294 0.71373 0.92157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_pipe/meshes/cz1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cz1"
+    type="fixed">
+    <origin
+      xyz="-0.057529 -3.5 0.048193"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="cz1" />
+    <axis
+      xyz="0 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
