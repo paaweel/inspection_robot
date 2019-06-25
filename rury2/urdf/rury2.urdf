@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rury2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.146539679083675 -0.144696903376291 -0.163630550647972"
+        rpy="0 0 0" />
+      <mass
+        value="31.6085183988525" />
+      <inertia
+        ixx="1.64169921519396"
+        ixy="-2.89694569101946E-12"
+        ixz="2.89685942810303E-12"
+        iyy="1.64169921519396"
+        iyz="-2.89720061482311E-12"
+        izz="1.64169921519396" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rury2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.552941176470588 0.713725490196078 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rury2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rest">
+    <inertial>
+      <origin
+        xyz="0.112097360493356 -0.330933723235301 4.49177277536988"
+        rpy="0 0 0" />
+      <mass
+        value="757.979559725597" />
+      <inertia
+        ixx="175.254312783982"
+        ixy="-8.49460587610192"
+        ixz="0.0785346090394447"
+        iyy="177.934390011814"
+        iyz="0.0671167117086633"
+        izz="104.426515877152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rury2/meshes/rest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.552941176470588 0.713725490196078 0.92156862745098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rury2/meshes/rest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rest"
+    type="fixed">
+    <origin
+      xyz="4.8748 -0.11607 -0.13501"
+      rpy="1.5708 -0.86363 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rest" />
+    <axis
+      xyz="0 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>

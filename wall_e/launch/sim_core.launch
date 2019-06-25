@@ -1,0 +1,20 @@
+<launch>
+
+	  <!-- Load the TortoiseBot URDF model into the parameter server -->
+   <param name="robot_description" textfile="$(find wall_e)/description/model.urdf"/>
+
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch" >
+		<arg name="world_name" value="$(find wall_e)/worlds/world_1.world"/>
+		<arg name="paused" value="false"/>
+    	<arg name="use_sim_time" value="true"/>
+    	<arg name="gui" value="true"/>
+    	<arg name="recording" value="false"/>
+    	<arg name="debug" value="false"/>
+  	</include>
+
+
+
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model model -x 3 -y 0 -z 0.5"/>
+
+</launch>

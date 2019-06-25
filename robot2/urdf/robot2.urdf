@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0013253 -0.025154 -0.093447"
+        rpy="0 0 0" />
+      <mass
+        value="0.12947" />
+      <inertia
+        ixx="0.00021534"
+        ixy="-2.1268E-08"
+        ixz="-7.7687E-08"
+        iyy="0.00022183"
+        iyz="2.4937E-05"
+        izz="0.00030609" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="connector">
+    <inertial>
+      <origin
+        xyz="-0.00138 -0.038 5.2042E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.04386" />
+      <inertia
+        ixx="2.6136E-05"
+        ixy="1.1316E-20"
+        ixz="-6.0877E-22"
+        iyy="5.047E-06"
+        iyz="2.9646E-21"
+        izz="2.6136E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/connector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/connector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="connector_j"
+    type="revolute">
+    <origin
+      xyz="0 -0.0090129 -0.034486"
+      rpy="-1.3093 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="connector" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="base2">
+    <inertial>
+      <origin
+        xyz="-5.4721E-05 -0.061131 6.5919E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.12947" />
+      <inertia
+        ixx="0.00021534"
+        ixy="-8.0545E-08"
+        ixz="-9.7832E-20"
+        iyy="0.00031292"
+        iyz="1.4791E-19"
+        izz="0.000215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/base2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/base2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base2j"
+    type="revolute">
+    <origin
+      xyz="-0.00138 -0.076 0"
+      rpy="2.4292 -1.5708 -2.2633" />
+    <parent
+      link="connector" />
+    <child
+      link="base2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L21">
+    <inertial>
+      <origin
+        xyz="-1.94289029309402E-16 0.0480327393085786 -1.04083408558608E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0296452830345854" />
+      <inertia
+        ixx="2.50173044319522E-05"
+        ixy="7.59682674568701E-21"
+        ixz="1.05879118406788E-22"
+        iyy="1.72590748901238E-06"
+        iyz="2.5146290621612E-22"
+        izz="2.48865166741963E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L21j"
+    type="revolute">
+    <origin
+      xyz="-0.1 -0.0725 0"
+      rpy="-3.1416 0 0.069166" />
+    <parent
+      link="base2" />
+    <child
+      link="L21" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W21">
+    <inertial>
+      <origin
+        xyz="-1.02348685082632E-16 -4.44089209850063E-16 3.60822483003176E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100179652990868" />
+      <inertia
+        ixx="1.88435757818629E-06"
+        ixy="4.5908523996693E-23"
+        ixz="-5.98878763488392E-22"
+        iyy="1.00354188062962E-06"
+        iyz="-5.29395592033938E-23"
+        izz="1.00354188062962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W21.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W21.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W21j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="-2.3969 -1.5708 -1.0967" />
+    <parent
+      link="L21" />
+    <child
+      link="W21" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L22">
+    <inertial>
+      <origin
+        xyz="-4.5102810375397E-17 0.0480327393085786 -1.73472347597681E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0296452830345854" />
+      <inertia
+        ixx="2.50173044319522E-05"
+        ixy="1.63450889040478E-20"
+        ixz="0"
+        iyy="1.72590748901238E-06"
+        iyz="-1.73641754187132E-20"
+        izz="2.48865166741963E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L22j"
+    type="revolute">
+    <origin
+      xyz="0.05 -0.0725 0.086603"
+      rpy="0.78091 0.78985 -2.1926" />
+    <parent
+      link="base2" />
+    <child
+      link="L22" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W22">
+    <inertial>
+      <origin
+        xyz="-6.59194920871187E-17 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100179652990868" />
+      <inertia
+        ixx="1.88435757818628E-06"
+        ixy="-2.38228016415272E-22"
+        ixz="-5.02925812432241E-22"
+        iyy="1.00354188062962E-06"
+        iyz="-6.61744490042422E-23"
+        izz="1.00354188062962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W22.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W22.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W22j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="0.85821 -1.5708 0" />
+    <parent
+      link="L22" />
+    <child
+      link="W22" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L23">
+    <inertial>
+      <origin
+        xyz="4.16333634234434E-17 0.0480327393085786 6.24500451351651E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0296452830345854" />
+      <inertia
+        ixx="2.50173044319522E-05"
+        ixy="-2.01170324972896E-21"
+        ixz="0"
+        iyy="1.72590748901238E-06"
+        iyz="-5.43953970814871E-21"
+        izz="2.48865166741963E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L23j"
+    type="revolute">
+    <origin
+      xyz="0.05 -0.0725 -0.086603"
+      rpy="-0.40164 -0.99652 -2.6733" />
+    <parent
+      link="base2" />
+    <child
+      link="L23" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W23">
+    <inertial>
+      <origin
+        xyz="1.69135538907739E-16 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100179652990868" />
+      <inertia
+        ixx="1.88435757818629E-06"
+        ixy="4.2351647362715E-22"
+        ixz="2.64697796016969E-23"
+        iyy="1.00354188062962E-06"
+        iyz="-6.61744490042422E-24"
+        izz="1.00354188062962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W23.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W23.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W23j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="3.0968 -1.5708 0" />
+    <parent
+      link="L23" />
+    <child
+      link="W23" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L11">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 0.048033 0.000413"
+        rpy="0 0 0" />
+      <mass
+        value="0.029645" />
+      <inertia
+        ixx="2.5017E-05"
+        ixy="-1.2012E-20"
+        ixz="1.3235E-22"
+        iyy="1.7259E-06"
+        iyz="1.5617E-21"
+        izz="2.4887E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L11j"
+    type="revolute">
+    <origin
+      xyz="-0.09862 -0.028555 -0.1043"
+      rpy="-1.8386 -0.066707 0.01829" />
+    <parent
+      link="base_link" />
+    <child
+      link="L11" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W11">
+    <inertial>
+      <origin
+        xyz="0.00041299743286035 -2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100179652990868" />
+      <inertia
+        ixx="1.88435757818629E-06"
+        ixy="1.85288457211878E-22"
+        ixz="3.30872245021211E-23"
+        iyy="1.00354188062962E-06"
+        iyz="1.48892510259545E-22"
+        izz="1.00354188062962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W11j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="0.34397 -1.5708 0" />
+    <parent
+      link="L11" />
+    <child
+      link="W11" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L12">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 0.048033 -0.0014016"
+        rpy="0 0 0" />
+      <mass
+        value="0.029645" />
+      <inertia
+        ixx="2.5017E-05"
+        ixy="4.5528E-21"
+        ixz="-1.6941E-21"
+        iyy="1.7259E-06"
+        iyz="1.3235E-21"
+        izz="2.4887E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.74902 0.74902 0.74902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L12j"
+    type="revolute">
+    <origin
+      xyz="0.050166 -0.11236 -0.081361"
+      rpy="-1.3563 0.9018 2.2482" />
+    <parent
+      link="base_link" />
+    <child
+      link="L12" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W12">
+    <inertial>
+      <origin
+        xyz="-0.00140159101980956 2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100179652990868" />
+      <inertia
+        ixx="1.88435757818628E-06"
+        ixy="1.32348898008484E-22"
+        ixz="1.42275065359121E-21"
+        iyy="1.00354188062962E-06"
+        iyz="-1.98523347012727E-23"
+        izz="1.00354188062962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0196078431372549 0.0196078431372549 0.0196078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W12j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="2.4078 -1.5708 0" />
+    <parent
+      link="L12" />
+    <child
+      link="W12" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="L13">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 0.0480327393085787 0.000988593586949253"
+        rpy="0 0 0" />
+      <mass
+        value="0.0296452830345854" />
+      <inertia
+        ixx="2.50173044319522E-05"
+        ixy="6.08804930839028E-21"
+        ixz="-1.6940658945086E-21"
+        iyy="1.72590748901238E-06"
+        iyz="-1.04290931630686E-20"
+        izz="2.48865166741963E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/L13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L13j"
+    type="revolute">
+    <origin
+      xyz="0.050524 0.055849 -0.12741"
+      rpy="-1.4244 0.43865 -2.0164" />
+    <parent
+      link="base_link" />
+    <child
+      link="L13" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0.35"
+      upper="0.5225"
+      effort="22"
+      velocity="22" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="W13">
+    <inertial>
+      <origin
+        xyz="0.00098859 3.0531E-16 -4.996E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.010018" />
+      <inertia
+        ixx="1.8844E-06"
+        ixy="2.5808E-22"
+        ixz="4.4999E-22"
+        iyy="1.0035E-06"
+        iyz="-1.3235E-23"
+        izz="1.0035E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.019608 0.019608 0.019608 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2/meshes/W13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="W13j"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0"
+      rpy="0.50024 -1.5708 0" />
+    <parent
+      link="L13" />
+    <child
+      link="W13" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
