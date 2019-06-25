@@ -2,6 +2,7 @@
 
 import rospy
 from geometry_msgs.msg import Twist
+from sensor_msgs.msg import Range
 
 g_sensor_data = {}
 
@@ -102,7 +103,6 @@ def steer():
     publisher = rospy.Publisher('/cmd/vel', Twist)
 
     lx, ly, lz, ax, ay, az = get_speed_and_direction()
-
     twist = Twist()
     twist.linear.x = lx
     twist.linear.y = ly
@@ -117,21 +117,25 @@ def steer():
 
 
 def scanSensors():
-    rospy.init_node('driveThrough')
 
-    cf_scan_sub = rospy.Subscriber('/laser/scan/cf', Range, cf_callback)
-    cb_scan_sub = rospy.Subscriber('/laser/scan/cb', Range, cb_callback)
-    cr_scan_sub = rospy.Subscriber('/laser/scan/cr', Range, cr_callback)
-    cl_scan_sub = rospy.Subscriber('/laser/scan/cl', Range, cl_callback)
-    fr_scan_sub = rospy.Subscriber('/laser/scan/fr', Range, fr_callback)
-    fl_scan_sub = rospy.Subscriber('/laser/scan/fl', Range, fl_callback)
-    br_scan_sub = rospy.Subscriber('/laser/scan/br', Range, br_callback)
-    bl_scan_sub = rospy.Subscriber('/laser/scan/bl', Range, bl_callback)
+    print 'sterr'
+    while not rospy.is_shutdown():
+        rospy.init_node('driveThrough')
 
-    steer()
+        cf_scan_sub = rospy.Subscriber('/laser/scan/cf', Range, cf_callback)
+        cb_scan_sub = rospy.Subscriber('/laser/scan/cb', Range, cb_callback)
+        cr_scan_sub = rospy.Subscriber('/laser/scan/cr', Range, cr_callback)
+        cl_scan_sub = rospy.Subscriber('/laser/scan/cl', Range, cl_callback)
+        fr_scan_sub = rospy.Subscriber('/laser/scan/fr', Range, fr_callback)
+        fl_scan_sub = rospy.Subscriber('/laser/scan/fl', Range, fl_callback)
+        br_scan_sub = rospy.Subscriber('/laser/scan/br', Range, br_callback)
+        bl_scan_sub = rospy.Subscriber('/laser/scan/bl', Range, bl_callback)
 
-    rospy.spin()
+        steer()
+	print 'sterr'
+
+        rospy.spin()
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     scanSensors()
