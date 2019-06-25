@@ -14,7 +14,7 @@
     <node name="spawn_urdf"
       pkg="gazebo_ros"
       type="spawn_model"
-      args="-param robot_description -urdf -model model -x 3 -y 0 -z 0.5"/>
+      args="-param robot_description -urdf -model model -x 0 -y 0 -z 0.5"/>
   </group>
 
   <group ns="pipe">
@@ -22,7 +22,7 @@
     <node name="spawn_urdf"
       pkg="gazebo_ros"
       type="spawn_model"
-      args="-param pipes -urdf -model pipe -x -3 -y 0 -z 0.5"/>
+      args="-param pipes -urdf -model pipe -x 0 -y 0 -z 0.5"/>
   </group>
 
 

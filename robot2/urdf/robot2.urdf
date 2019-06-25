@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
      Commit Version: 1.5.0-0-g9aa0fdb  Build Version: 1.5.7004.21443
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
@@ -854,4 +854,140 @@
     <safety_controller
       k_velocity="0" />
   </joint>
+
+
+
+<!-- L11 -->
+<transmission name = "L11_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L11_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L11j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- L12 -->
+<transmission name = "L12_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L12_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L12j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- L13 -->
+<transmission name = "L13_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L13_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L13j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- L21 -->
+<transmission name = "L21_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L21_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L21j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- L22 -->
+<transmission name = "L22_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L22_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L22j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- L23 -->
+<transmission name = "L23_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "L23_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "L23j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- Base1 -->
+<transmission name = "B1_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "B1_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "connector_j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+<!-- Base2 -->
+<transmission name = "base2_trans">
+
+	<type>transmission_interface/SimpleTransmission</type>
+
+	<actuator name = "base2_acc">
+		<mechanicalReduction>1</mechanicalReduction>
+	</actuator>
+
+	<joint name = "base2j">
+		<hardwareInterface>PositionJointInterface</hardwareInterface>
+	</joint>
+
+</transmission>
+
+
+
+<gazebo>
+	<static>false</static>
+
+	<plugin name = "gazebo_ros_control" filename = "libgazebo_ros_control.so">
+		<robotNamespace> </robotNamespace>
+		<robotSimType>gazebo_ros_control/DefaultRobotHWSim </robotSimType>
+		<legacyModeNS>true</legacyModeNS>
+	</plugin>
+
+</gazebo>
+
 </robot>

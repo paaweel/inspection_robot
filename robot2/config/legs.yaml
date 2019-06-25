@@ -1,0 +1,10 @@
+type: "position_controllers/JointGroupPositionController"
+joints:
+ - L11j
+ - L12j
+ - L13j
+ - L21j
+ - L22j
+ - L23j
+ - connector_j
+ - base2j

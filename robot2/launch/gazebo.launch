@@ -17,4 +17,15 @@
     pkg="rostopic"
     type="rostopic"
     args="pub /calibrated std_msgs/Bool true" />
+
+    <param name="robot_description" command="cat $(find robot2)/urdf/robot2.urdf" />
+
+    <rosparam command="load"
+          file="$(find robot2)/config/legs.yaml"
+          ns="robot2_legs_controller" />
+
+
+<node name="robot2_controller_spawner" pkg="controller_manager" type="spawner"
+  args="robot2_legs_controller
+         --shutdown-timeout 3"/>
 </launch>
